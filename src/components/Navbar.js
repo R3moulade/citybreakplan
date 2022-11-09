@@ -1,26 +1,30 @@
 import { NavLink } from 'react-router-dom';
 
+// Icons
 import HomeIcon from '@mui/icons-material/Home';
 import EventIcon from '@mui/icons-material/Event';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AccessibleForwardIcon from '@mui/icons-material/AccessibleForward';
 
+// CSS
+import styles from './Navbar.module.css'
+
 export default function Navbar() {
     return (
 
         <div>
-          <nav className='nav1'>
+          <nav className={styles.nav1}>
             <NavLink to="/home" end>
-              <HomeIcon size={30}/>
+              <HomeIcon />
             </NavLink>
-            <NavLink to="/list">
-              <EventIcon size={30}/>
+            <NavLink to="/explore">
+              <EventIcon />
             </NavLink> 
-            <NavLink to="/discount">
-              <AccessibleForwardIcon size={30}/>
+            <NavLink to="/calendar">
+              <AccessibleForwardIcon />
             </NavLink>
-            <NavLink to="/profile">
-              <BiUser size={30}/>
+            <NavLink to="/settings">
+              <MoreVertIcon />
             </NavLink>
           </nav>
         </div>
