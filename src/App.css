@@ -52,5 +52,62 @@ button {
 }
 
 .nav1{
-  background-color: yellow;
+  background-color: grey;
+}
+
+/* EXPLORE PAGE ----------------------------------------------------- */
+
+.exploreGRID {
+  display: grid; 
+
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  
+  grid-template-areas: 
+ 'label0 label0'
+ 'label2 label1'
+ 'label3 label1'
+ 'label3 label4'
+ 'label5 label5';
+  
+  gap: 0px;
+  height: 50rem;
+}
+
+
+.exploreGRID > :nth-child(1) {
+
+  background-color: #B596DE; 
+  grid-area: label0;
+  
+}
+.exploreGRID > :nth-child(2) {
+
+  background-color: #D97D7A; 
+  grid-area: label1;
+  
+}
+.exploreGRID > :nth-child(3) {
+
+  background-color: #9A9B9B; 
+  grid-area: label2;
+  
+}
+.exploreGRID > :nth-child(4) {
+
+  background-color: #9D97CE; 
+  grid-area: label3;
+  
+}
+.exploreGRID > :nth-child(5) {
+
+  background-color: #99C6BD; 
+  grid-area: label4;
+  
+}
+.exploreGRID > :nth-child(6) {
+
+  background-color: #DABAFC; 
+  grid-area: label5;
+  
 }

@@ -1,4 +1,4 @@
 .categoryCard{
-    height: 10rem;
-    background-color: red;
+    display: flex;
+ 
 }

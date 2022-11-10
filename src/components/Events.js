@@ -21,6 +21,7 @@ export default function Events()
             const response = await fetch(url);
             const data = await response.json();
             const filteredrest = [];
+            console.log(data);
           
            try{
                 for (var i = 0; i < data.length; i++) {
