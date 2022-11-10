@@ -15,13 +15,12 @@ import Settings from "./pages/Settings"
 function App() {
   return (
     <div>
-
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/settings" element={<Settings />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/*" element={<Home />} />
       </Routes>
 
       <Navbar />
