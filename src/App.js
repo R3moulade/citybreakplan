@@ -4,6 +4,7 @@ import './App.css';
 
 // Components
 import Places from './components/Places'
+import Events from './components/Events';
 import Navbar from './components/Navbar';
 
 // Pages
@@ -26,7 +27,8 @@ function App() {
       <Navbar />
 
       <div className="container">
-        <Places/>
+        {/* <Places/> */}
+        {/* <Events /> */}
       </div>
 
     </div>

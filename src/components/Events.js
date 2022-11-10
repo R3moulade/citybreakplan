@@ -24,11 +24,11 @@ export default function Events()
           
            try{
                 for (var i = 0; i < data.length; i++) {
-                var events= data[i];
-               if(events.MainCategory.Id == '58')
+                var event = data[i];
+               if(event.MainCategory.Id == '62')
                {
                    // console.log(place.Name + ' ' + place.MainCategory.Name);
-                    filteredrest.push(Events)
+                    filteredrest.push(event)
                }
             }
            }catch (error) {
@@ -42,9 +42,9 @@ export default function Events()
 
     return(
     <>
-    <h2>Places That are Events</h2>
+    <h2>Events</h2>
         {
-           events.map(place =>(<EventsItem events={events} key={events.id} />))
+           events.map(event =>(<EventsItem event={event} key={event.id} />))
         }
     </>
     )    

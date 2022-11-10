@@ -5,9 +5,9 @@
 */
 
 
-export default function EventsItem({events}){
+export default function EventsItem({event}){
     return <div style={{display:"float"}}>
-            <div style={{float:"left", width:"25%"}}>{events.Name}</div>
-            <div style={{float:"left", width:"75%"}}>{events.Category.Name}</div>
+            <div style={{float:"left", width:"25%"}}>{event.Name}</div>
+            <div style={{float:"left", width:"75%"}}>{event.Category.Name}</div>
         </div>;
 }

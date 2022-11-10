@@ -22,20 +22,22 @@ export default function Places()
             const data = await response.json();
             const filteredrest = [];
           
-           try{
+            try{
                 for (var i = 0; i < data.length; i++) {
                 var place = data[i];
-               if(place.MainCategory.Id == '62')
+                if(place.MainCategory.Id == '62')
                {
                    // console.log(place.Name + ' ' + place.MainCategory.Name);
                     filteredrest.push(place)
                }
             }
-           }catch (error) {
+            } catch (error) {
             console.log('Oh come on! These should be easy peeps! What')
-          }
+            }
+
             setPlaces(filteredrest);
         }
+
         getPlaces();
 
     }, []);
