@@ -1,11 +1,16 @@
 import React from 'react';
-import { Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import './App.css';
-import Places from './components/Places'
 
+// Components
+import Places from './components/Places'
+import Navbar from './components/Navbar';
+
+// Pages
 import Home from "./pages/Home";
 import Calendar from "./pages/Calendar"
 import Explore from "./pages/Explore"
+import Settings from "./pages/Settings"
 
 function App() {
   return (
@@ -14,7 +19,16 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/calendar" element={<Calendar />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/*" element={<Home />} />
       </Routes>
+
+      <Navbar />
+
+      <div className="container">
+        <Places/>
+      </div>
+
     </div>
   );
 }
