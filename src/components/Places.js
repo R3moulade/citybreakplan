@@ -42,10 +42,12 @@ export default function Places()
 
     return(
     <>
+    <div>
     <h2>Places To Eat</h2>
         {
-           places.map(place =>(<PlaceItem place={place} key={place.id} />))
+           places.map(place =>(<PlaceItem place={place} key={place.id}/>))
         }
+        </div>
     </>
     )    
 }

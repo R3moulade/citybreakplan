@@ -1,5 +1,5 @@
-import Places from "../components/Places"
-import Events from "../components/Events"
+import Places from "../../components/Places"
+import Events from "../../components/Events"
 
 export default function Explore() {
     return (

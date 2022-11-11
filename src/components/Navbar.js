@@ -17,10 +17,10 @@ export default function Navbar() {
             <NavLink to="/home" end>
               <HomeIcon />
             </NavLink>
-            <NavLink to="/explore">
+            <NavLink to="/calendar">
               <EventIcon />
             </NavLink> 
-            <NavLink to="/calendar">
+            <NavLink to="/explore">
               <AccessibleForwardIcon />
             </NavLink>
             <NavLink to="/settings">
