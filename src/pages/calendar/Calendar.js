@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+import Calendar from 'short-react-calendar';
 
-export default function MyCalendar() {
+export default function MyCalender() {
   const [value, onChange] = useState(new Date());
 
   return (
     <div>
-      <Calendar onChange={onChange} value={value} />
+      <Calendar onChange={onChange} value={value}
+      calendarType="US"
+      oneWeekCalendar={true} />
     </div>
   );
 }
