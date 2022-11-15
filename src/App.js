@@ -21,10 +21,6 @@ import Activities from "./pages/Activities"
 import Activity from "./pages/Activity";
 import Events from "./pages/Events"
 import Event from "./pages/Event"
-import Explore from "./pages/Explore"
-import Categories from "./pages/Categories"
-import Calender from "./pages/Calender"
-import More from "./pages/More"
 
 function App() {
   return (
@@ -38,8 +34,7 @@ function App() {
         <Route path="/favorite" element={<Favorite />} />
         <Route path="/*" element={<Home />} />
           
-          
-          <Route path="/categories" element={<Categories />} />
+
           <Route path="/places-to-eat" element={<PlacesToEat />} />
             <Route path="/places-to-eat/:id" element={<PlaceToEat />} />
             <Route path="/events" element={<Events />} />
