@@ -41,11 +41,6 @@ export default function Places()
         getPlaces();
 
     }, []);
-    window.onload=function()
-        {document.getElementById("breakfast2")
-        .addEventListener('click', function(event) {
-          document.getElementById("mealTableContainer2").classList.remove('hidden');
-        });}
 
     return(
     <>
@@ -54,7 +49,6 @@ export default function Places()
         {
            places.map(place =>(<PlaceItem place={place} key={place.id}/>))
         }
-        <button id="breakfast2">Save</button>
         </div>
     </>
     )    
