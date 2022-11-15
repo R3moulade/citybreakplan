@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import imagePlaceholder from "../img/img-placeholder.jpeg";
+import "./SearchBar.css"
 
 function SearchBar() {
   const [search, setSearch] = useState("");
@@ -62,28 +63,30 @@ function SearchBar() {
 
   return (
     <div>
+<div className="flexbox">
+        <>
+            <select onChange={updateSearch} className="searchbar">
+              <option value=''>Find Places Near You</option>
+                <option value='Attractions'>Attractions</option>
+               <option value='Activities'>Activities</option>
+                <option value='Events'>Events</option>
+               <option value='Cafés'>Cafés</option>
+               <option value='Restaurants'>Restaurants</option>
 
+            </select>
+         </> 
 
       <div>
         <input
           type="text"
           name="search"
           autoComplete="off"
-          placeholder="Type your search..."
           onChange={updateSearch}
+          placeholder="&#128269;"
+          className="searchbar search"
         />
-
-        <>
-            <select onChange={updateSearch}>
-              <option value=''>-Near By-</option>
-                <option value='Attractions'>Attractions</option>
-               <option value='Activities'>Activities</option>
-            <option value='Events'>Events</option>
-               <option value='Cafés'>Cafés</option>
-               <option value='Restaurants'>Restaurants</option>
-
-            </select>
-         </>        
+</div>
+               
         <div>
           {SearchData.filter((data) => {
             console.log("new request");
