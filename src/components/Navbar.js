@@ -17,11 +17,12 @@ return(
     <NavLink to="/categories">
       <CategoryIcon/>
     </NavLink>
-    <NavLink to="/calender">
+    <NavLink to="/favorite">
       <FavoriteBorderOutlinedIcon/>
     </NavLink>
-    <NavLink to="/more">
+    <NavLink to="/calendar">
       <CalendarTodayIcon/>
+      
     </NavLink>
   </nav>
 )

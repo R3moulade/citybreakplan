@@ -7,7 +7,6 @@ export default function Home() {
             <img src={Logo} alt="" style={{ width: "45vw"}}></img>
             <SearchBar/>
             <h1>Highlights</h1>
-            
             <h1>Upcoming events</h1>
             <h1>Hidden treasures</h1>
         </div>
