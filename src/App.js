@@ -13,6 +13,19 @@ import Categories from "./pages/Categories"
 import SearchResult from "./pages/SearchResult"
 import Favorite from "./pages/Favorite"
 
+import PlacesToEat from "./pages/PlacesToEat"
+import PlaceToEat from "./pages/PlaceToEat"
+import Attractions from "./pages/Attractions"
+import Attraction from "./pages/Attraction"
+import Activities from "./pages/Activities"
+import Activity from "./pages/Activity";
+import Events from "./pages/Events"
+import Event from "./pages/Event"
+import Explore from "./pages/Explore"
+import Categories from "./pages/Categories"
+import Calender from "./pages/Calender"
+import More from "./pages/More"
+
 function App() {
   return (
     <div>
