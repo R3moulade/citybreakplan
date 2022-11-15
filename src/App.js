@@ -24,6 +24,23 @@ function App() {
         <Route path="/calendar/:id" element={<Save />} />
         <Route path="/favorite" element={<Favorite />} />
         <Route path="/*" element={<Home />} />
+          
+          
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/places-to-eat" element={<PlacesToEat />} />
+            <Route path="/places-to-eat/:id" element={<PlaceToEat />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/events/:id" element={<Event />} />
+            <Route path="/attractions" element={<Attractions />} />
+            <Route path="/attractions/:id" element={<Attraction />} />
+            <Route path="/activities" element={<Activities />} />
+            <Route path="/activities/:id" element={<Activity />} />
+          
+          
+          
+          
+          
+          
       </Routes>
 
       <Navbar />
