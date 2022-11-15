@@ -1,23 +1,15 @@
-/*Places
-*
-*Component Functions to fetch and parse json data, example showing and writing filtering of categors
-*Importing and Calling each place in a list of places to be rendered
-*
-*Author Jeffrey Serio
-*/
 
-import React, { useEffect, useState } from 'react'
-import PlaceItem from "./PlaceItem";
-import SaveItem from "../pages/calendar/SaveItem";
-import "../pages/calendar/Calendar.css"
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import SaveItem from "./SaveItem";
+import "./Calendar.css"
 
-export default function Places()
-{
-    const[places, setPlaces] = useState([]);
+export default function Save() {
+    const[saves, setSaves] = useState([]);
 
     useEffect(() => {
 
-        async function getPlaces()
+        async function getSaves()
         {
             const url = "https://raw.githubusercontent.com/manypossibles/designops/master/assets/data/en/data.json";
             const response = await fetch(url);
@@ -27,7 +19,7 @@ export default function Places()
            try{
                 for (var i = 0; i < data.length; i++) {
                 var place = data[i];
-               if(place.MainCategory.Id == '62')
+               if(data)
                {
                    // console.log(place.Name + ' ' + place.MainCategory.Name);
                     filteredrest.push(place)
@@ -36,26 +28,35 @@ export default function Places()
            }catch (error) {
             console.log('Oh come on! These should be easy peeps! What')
           }
-            setPlaces(filteredrest);
+            setSaves(filteredrest);
         }
-        getPlaces();
+        getSaves();
 
     }, []);
+
     window.onload=function()
         {document.getElementById("breakfast2")
         .addEventListener('click', function(event) {
           document.getElementById("mealTableContainer2").classList.remove('hidden');
         });}
 
-    return(
-    <>
-    <div>
-    <h2>Places To Eat</h2>
+            return (
+<div>
+<button id="breakfast2">Save</button>
+<table id="mealTableContainer2" className="hidden">
+  <thead>
+    <tr>
+      <th id="mealname">
         {
-           places.map(place =>(<PlaceItem place={place} key={place.id}/>))
+           saves.map(save =>(<SaveItem save={save} key={save.id}/>))
         }
-        <button id="breakfast2">Save</button>
-        </div>
-    </>
-    )    
+        </th>
+    </tr>
+  </thead>
+  <tbody id="mealContainer2"></tbody>
+</table>
+</div>
+            );
+// onclick - add saved class
+// filter saved class, includes
 }

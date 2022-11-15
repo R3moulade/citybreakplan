@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Calendar from 'short-react-calendar';
+import Save from './Save';
 
 export default function MyCalender() {
   const [value, onChange] = useState(new Date());
@@ -9,6 +10,7 @@ export default function MyCalender() {
       <Calendar onChange={onChange} value={value}
       calendarType="US"
       oneWeekCalendar={true} />
+      <Save/>
     </div>
   );
 }
