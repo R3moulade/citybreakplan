@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import imagePlaceholder from "../img/img-placeholder.jpg";
+import imagePlaceholder from "../img/img-placeholder.jpeg";
 
 // Icons
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';

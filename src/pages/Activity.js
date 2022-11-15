@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import imagePlaceholder from "../img/img-placeholder.jpg";
+import imagePlaceholder from "../img/img-placeholder.jpeg";
 
 export default function Activity() {
     const params = useParams();
